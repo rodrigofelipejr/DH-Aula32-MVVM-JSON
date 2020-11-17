@@ -1,9 +1,8 @@
-package br.com.house.exerciciomvvmjson
+package br.com.house.exerciciomvvmjson.model
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val context = getApplication<Application>().applicationContext

@@ -1,9 +1,12 @@
-package br.com.house.exerciciomvvmjson
+package br.com.house.exerciciomvvmjson.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.com.house.exerciciomvvmjson.view.adapter.AdapterFilmes
+import br.com.house.exerciciomvvmjson.model.MainViewModel
+import br.com.house.exerciciomvvmjson.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

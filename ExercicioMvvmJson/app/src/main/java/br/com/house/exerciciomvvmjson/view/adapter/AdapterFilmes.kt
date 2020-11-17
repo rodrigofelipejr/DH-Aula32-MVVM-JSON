@@ -1,25 +1,27 @@
-package br.com.house.exerciciomvvmjson
+package br.com.house.exerciciomvvmjson.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.house.exerciciomvvmjson.model.Filme
+import br.com.house.exerciciomvvmjson.R
 import kotlinx.android.synthetic.main.item_filme.view.*
 
 class AdapterFilmes(private val listaFilmes: List<Filme>) :
     RecyclerView.Adapter<AdapterFilmes.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindView(dd: Filme) {
-            val titulo = itemView.textViewTitulo
-            val data = itemView.textViewData
-            val descricao = itemView.textViewDescricao
-            val direcao = itemView.textViewDirecao
+        fun bindView(filme: Filme) {
+            val textTitulo = itemView.textViewTitulo
+            val textData = itemView.textViewData
+            val textDescricao = itemView.textViewDescricao
+            val textDirecao = itemView.textViewDirecao
 
-            titulo.text = dd.titulo
-            data.text = dd.data
-            descricao.text = dd.descricao
-            direcao.text = dd.direcao
+            textTitulo.text = filme.titulo
+            textData.text = filme.data
+            textDescricao.text = filme.descricao
+            textDirecao.text = filme.direcao
         }
     }
 
@@ -32,7 +34,7 @@ class AdapterFilmes(private val listaFilmes: List<Filme>) :
     override fun getItemCount() = listaFilmes.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var dataItem = listaFilmes[position];
+        val dataItem = listaFilmes[position];
         holder.let { holder.bindView(dataItem) }
     }
 }
