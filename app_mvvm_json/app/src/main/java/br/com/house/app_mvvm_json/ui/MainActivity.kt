@@ -19,9 +19,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        val listExpenses = viewModel.getListExpenses()
-        listExpenses.forEach {
-            Log.i("MainActivity", it.toString())
+        val listExpensesA = viewModel.getListExpenses()
+        listExpensesA.forEach {
+            Log.i("MainActivity A", it.toString())
+        }
+
+        val listExpensesB = viewModel.getListExpensesGson()
+        listExpensesB.forEach {
+            Log.i("MainActivity B", it.toString())
         }
     }
 }

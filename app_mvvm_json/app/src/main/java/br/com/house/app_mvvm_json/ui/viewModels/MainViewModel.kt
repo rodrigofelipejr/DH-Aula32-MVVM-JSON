@@ -4,6 +4,8 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import br.com.house.app_mvvm_json.models.Expense
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import org.json.JSONArray
 import java.io.IOException
 
@@ -38,5 +40,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         } finally {
             return listExpenses
         }
+    }
+
+    fun getListExpensesGson(): List<Expense> {
+        // realizando a leitura do arquivo .json
+        val jsonString = context.assets.open("expenses.json")
+            .bufferedReader()
+            .use { it.readText() }
+
+        return Gson().fromJson(jsonString, object : TypeToken<List<Expense>>() {}.type)
     }
 }
