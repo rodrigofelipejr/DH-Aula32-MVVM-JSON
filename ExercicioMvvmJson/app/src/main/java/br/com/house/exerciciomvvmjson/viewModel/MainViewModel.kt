@@ -1,7 +1,8 @@
-package br.com.house.exerciciomvvmjson.model
+package br.com.house.exerciciomvvmjson.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import br.com.house.exerciciomvvmjson.model.Filmes
 import com.google.gson.Gson
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {

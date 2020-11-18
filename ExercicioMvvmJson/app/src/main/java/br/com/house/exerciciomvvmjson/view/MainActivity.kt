@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.house.exerciciomvvmjson.view.adapter.AdapterFilmes
-import br.com.house.exerciciomvvmjson.model.MainViewModel
+import br.com.house.exerciciomvvmjson.viewModel.MainViewModel
 import br.com.house.exerciciomvvmjson.R
 import kotlinx.android.synthetic.main.activity_main.*
 
